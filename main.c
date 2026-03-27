@@ -28,13 +28,6 @@ int main () {
     Matrix *myMatrix1 = createMatrix(2, 2);
     Matrix *myMatrix2 = createMatrix(2, 2);
     Matrix *sumMatrix = createMatrix(2, 2);
-    inputAllElement(myMatrix1);
-    inputAllElement(myMatrix2);
-    sumOfTwoMatrix(sumMatrix, myMatrix1, myMatrix2);
-    printAllElement(sumMatrix);
-    freeMatrix(myMatrix1);
-    freeMatrix(myMatrix2);
-    freeMatrix(sumMatrix);
 
     return 0;
 }
