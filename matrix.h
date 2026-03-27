@@ -15,5 +15,6 @@ void freeMatrix(Matrix *m);
 void setElement(Matrix *m, int r, int c, float value);
 float accessElement(Matrix *m, int r, int c);
 void sumOfTwoMatrix(Matrix *resultantMatrix, Matrix *m1, Matrix *m2);
+void multiplyTwoMatrix(Matrix *resultantMatrix, Matrix *m1, Matrix *m2);
 
 #endif

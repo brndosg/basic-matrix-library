@@ -39,3 +39,20 @@ void sumOfTwoMatrix(Matrix *resultantMatrix, Matrix *m1, Matrix *m2){
         printf("The two matrices cannot be added! Check order of all matrices involved.\n");
     }
 }
+
+// Define function for multiplication operations between 2 matrices
+void multiplyTwoMatrix(Matrix *resultantMatrix, Matrix *m1, Matrix *m2){
+    if (resultantMatrix->rows == m1->rows && resultantMatrix->col == m2->col && m1->col == m2->rows){
+        for (int i = 0; i < m1->rows; i++) {
+            for (int j = 0; j < m2->col; j++){
+                for (int k = 0; k < m1->col; k++) {
+                    float a = m1->data[(i * m1->col) + k];  // wtf does this do??
+                    float b = m1->data[(k * m2->col) + i];
+                    resultantMatrix->data[(i * m1->col) + j] += a*b;
+                }
+            }
+        }
+    } else{
+        printf("The two matrices cannot be multiplied! Check order of all matrices involved");
+    }
+}
